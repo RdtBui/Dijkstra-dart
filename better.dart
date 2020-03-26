@@ -7,11 +7,11 @@
 
 import 'dart:io';
 
-class Node {
+class Vertex {
   String name;
   int distance;
 
-  Node(String name, int distance);
+  Vertex (String name, int distance);
 }
 
 class DijkstrasAlgorithm {
