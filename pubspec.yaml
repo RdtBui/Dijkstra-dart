@@ -1,0 +1,13 @@
+name: whatever
+version: 1.2.3
+description: >-
+  Have you been turned into a newt?  Would you like to be?
+  This package can help. It has all of the
+  newt-transmogrification functionality you have been looking
+  for.
+homepage: https://example-pet-store.com/newtify
+documentation: https://example-pet-store.com/newtify/docs
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+dependencies:
+  collection: ^1.14.12
