@@ -7,6 +7,13 @@
 
 import 'dart:io';
 
+class Node {
+  String name;
+  int distance;
+
+  Node(String name, int distance);
+}
+
 class DijkstrasAlgorithm {
   static final int NO_PARENT = -1;
 
