@@ -1,3 +1,4 @@
+// dart port of https://www.geeksforgeeks.org/java-program-for-dijkstras-shortest-path-algorithm-greedy-algo-7/
 // A Java program for Dijkstra's
 // single source shortest path
 // algorithm. The program is for
@@ -14,7 +15,7 @@ class DijkstrasAlgorithm {
   // algorithm for a graph represented
   // using adjacency matrix
   // representation
-  static void dijkstra(List<List<int>> adjacencyMatrix, int startVertex) {
+  static List<int> dijkstra(List<List<int>> adjacencyMatrix, int startVertex) {
     int nVertices = adjacencyMatrix[0].length;
 
     // shortestDistances[i] will hold the
@@ -84,6 +85,7 @@ class DijkstrasAlgorithm {
     }
 
     printSolution(startVertex, shortestDistances, parents);
+    return parents;
   }
 
   // A utility function to print
@@ -95,16 +97,13 @@ class DijkstrasAlgorithm {
     print("Vertex\tDistance\tPath");
 
     for (int vertexIndex = 0; vertexIndex < nVertices; vertexIndex++) {
-       if (vertexIndex != startVertex) {
+      if (vertexIndex != startVertex) {
         stdout.write("$startVertex  -> $vertexIndex ");
-        stdout.write("${distances[vertexIndex]} \t\t");
+        stdout.write("${distances[vertexIndex]}] \t\t");
         printPath(vertexIndex, parents);
         print(""); // keep this, dont ask
       }
     }
-    // stdout.write("\n 0 -> 8 ");
-    // stdout.write("${distances[8]} \t\t");
-    // printPath(8, parents);
   }
 
   // Function to print shortest path
@@ -117,6 +116,6 @@ class DijkstrasAlgorithm {
       return;
     }
     printPath(parents[currentVertex], parents);
-    stdout.write("$currentVertex ");
+    stdout.write("[${parents[currentVertex]}: $currentVertex] ");
   }
 }
