@@ -8,6 +8,6 @@ description: >-
 homepage: https://example-pet-store.com/newtify
 documentation: https://example-pet-store.com/newtify/docs
 environment:
-  sdk: '>=2.0.0 <3.0.0'
+  sdk: '>=2.2.0 <3.0.0'
 dependencies:
   collection: ^1.14.12
